@@ -3,7 +3,7 @@
 set -eo pipefail
 
 echo "This script will wipe the existing R installation at /opt/R-devel."
-read -p "Are you sure you wish to continue?"
+read -p "Are you sure you wish to continue? (yes)"
 if [ "$REPLY" != "yes" ]; then
    exit
 fi
@@ -15,7 +15,6 @@ curl https://stat.ethz.ch/R/daily/R-devel.tar.gz > R-devel.tar.gz
 tar -xf R-devel.tar.gz
 cd R-devel
 rm -rf /opt/R-devel/
-make clean
 ./configure --prefix=/opt/R-devel/ --enable-R-shlib
 make -j 5
 make install
