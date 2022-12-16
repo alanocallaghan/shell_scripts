@@ -1,4 +1,5 @@
 #!/bin/env bash
+## https://tex.stackexchange.com/questions/20883/how-to-convert-pdf-to-eps
 # $Id: pdf2eps,v 0.01 2005/10/28 00:55:46 Herbert Voss Exp $
 # Convert PDF to encapsulated PostScript.
 # usage:
